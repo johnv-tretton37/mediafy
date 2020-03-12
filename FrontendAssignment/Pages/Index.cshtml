@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Frontend Assigment";
+    
+}
+
+<div class="container py-5 mt-n5">
+    <section class="product-list row">
+        @foreach(var product in Model.Products)
+        {
+            <div class="product-box col-sm-auto p-3">
+                <div class="product-box-inner rounded p-3 bg-white shadow">
+                    <a asp-page="/Product/Index" 
+                       asp-route-urlsegment="@product.UrlSegment" 
+                       class="product-item">
+                        <div class="image-box">
+                            <img class="img-fluid" 
+                                 alt="@product.Name" 
+                                 src="@product.Image"/>
+                        </div>
+                        <div class="d-flex pt-2">
+                            <span class="flex-fill">@product.Name</span>
+                            <span class="badge badge-primary">@product.FromPrice</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        }
+    </section>
+</div>

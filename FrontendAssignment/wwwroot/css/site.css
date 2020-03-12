@@ -1,0 +1,48 @@
+﻿:root {
+    --c-highlight: #b73235;
+    --c-primary: #0078c1;
+    --c-secondary: #9fd6ff;
+    --c-bg: #eef8ff;
+}
+
+html, body {
+    margin:0;
+    padding:0;
+}
+
+body {
+    background-color: var(--c-bg);
+}
+
+* {
+    box-sizing:border-box;
+}
+
+.product-item img {
+    transition: all ease-in-out 0.2s;
+}
+
+.product-item .image-box {
+    height: 25rem;
+    overflow: hidden;
+}
+
+.product-item .image-box:hover img {
+    transform: scale(1.2);
+}
+
+.product-details .card-img-top {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+}
+
+.badge-primary {
+    color: #ffffff;
+    background-color: var(--c-primary);
+}
+
+.hero {
+    background-color: var(--c-secondary);
+    color: #ffffff;
+}

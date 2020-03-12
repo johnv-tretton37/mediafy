@@ -1,0 +1,24 @@
+@page "{urlSegment?}"
+@model FrontendAssignment.Pages.Product.IndexModel
+@{
+    ViewData["Title"] = Model.ViewProduct.Name;
+    ViewData["JumboClasses"] = "d-none d-md-block";
+}
+
+<div class="container my-5 mt-md-n5">
+    <div class="card shadow product-details">
+        <div class="card-header">
+            <a asp-page="/Index" class="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </a>
+        </div>
+        <img class="card-img-top" 
+             alt="@Model.ViewProduct.Name" 
+             src="@Model.ViewProduct.Image"/>
+        <div class="card-body">
+            <h1 class="card-title">@Model.ViewProduct.Name</h1>
+            <span class="badge badge-primary">@Model.ViewProduct.FromPrice</span>
+            <p class="card-text">@Model.ViewProduct.Description</p>
+        </div>
+    </div>
+</div>
